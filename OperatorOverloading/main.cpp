@@ -39,8 +39,7 @@ int main()
     std::shared_ptr<Vector> v1;
     {
         std::shared_ptr<Vector> shared = std::make_shared<Vector>();
-        std::weak_ptr<Vector> weakPtr =
-        v1 = shared;
+        std::weak_ptr<Vector> weakPtr = v1 = shared;
     }
 
 }
