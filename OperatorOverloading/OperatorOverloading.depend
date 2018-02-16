@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1518765804 source:/home/cvetomir/OperatorOverloading/main.cpp
+	<iostream>
+	"Vector.h"
+	<memory>
+
+1518711248 /home/cvetomir/OperatorOverloading/Vector.h
+
