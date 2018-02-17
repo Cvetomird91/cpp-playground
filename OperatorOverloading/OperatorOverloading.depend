@@ -6,7 +6,7 @@
 
 1518711248 /home/cvetomir/OperatorOverloading/Vector.h
 
-1518865926 source:/media/winD/workspaces/cpp-playground/OperatorOverloading/main.cpp
+1518868599 source:/media/winD/workspaces/cpp-playground/OperatorOverloading/main.cpp
 	<iostream>
 	"Vector.h"
 	<memory>
@@ -16,6 +16,6 @@
 
 1518852925 /media/winD/workspaces/cpp-playground/OperatorOverloading/Vector.h
 
-1518865987 /media/winD/workspaces/cpp-playground/OperatorOverloading/String.h
+1518868942 /media/winD/workspaces/cpp-playground/OperatorOverloading/String.h
 	<cstring>
 

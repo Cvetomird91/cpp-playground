@@ -7,6 +7,10 @@
 
 using namespace std;
 
+void PrintString(const String& string) {
+    std::cout << string << std::endl;
+}
+
 int main()
 {
 
@@ -53,7 +57,13 @@ int main()
 
     String str = "Ceco";
     String second = str;
+    second[2] = 'C';
+
 
     cout << str << endl;
     cout << second << endl;
+
+    PrintString(str);
+    PrintString(second);
+
 }
