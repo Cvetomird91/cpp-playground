@@ -1,6 +1,9 @@
 #include <iostream>
 #include "Vector.h"
 #include <memory>
+#include "String.h"
+#include <string>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -35,6 +38,7 @@ int main()
 
     //unique pointer
     //shared pointer
+    //make shared
 
     std::shared_ptr<Vector> v1;
     {
@@ -42,4 +46,14 @@ int main()
         std::weak_ptr<Vector> weakPtr = v1 = shared;
     }
 
+    Vector* a = new Vector();
+    Vector* b = a;
+
+    cout << sizeof(b) << endl;
+
+    String str = "Ceco";
+    String second = str;
+
+    cout << str << endl;
+    cout << second << endl;
 }
