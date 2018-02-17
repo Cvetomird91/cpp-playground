@@ -6,16 +6,19 @@
 
 1518711248 /home/cvetomir/OperatorOverloading/Vector.h
 
-1518868599 source:/media/winD/workspaces/cpp-playground/OperatorOverloading/main.cpp
+1518888040 source:/media/winD/workspaces/cpp-playground/OperatorOverloading/main.cpp
 	<iostream>
 	"Vector.h"
 	<memory>
 	"String.h"
 	<string>
 	<stdlib.h>
+	"ScopedPtr.h"
 
 1518852925 /media/winD/workspaces/cpp-playground/OperatorOverloading/Vector.h
 
 1518868942 /media/winD/workspaces/cpp-playground/OperatorOverloading/String.h
 	<cstring>
+
+1518887569 /media/winD/workspaces/cpp-playground/OperatorOverloading/ScopedPtr.h
 

@@ -4,6 +4,7 @@
 #include "String.h"
 #include <string>
 #include <stdlib.h>
+#include "ScopedPtr.h"
 
 using namespace std;
 
@@ -59,11 +60,10 @@ int main()
     String second = str;
     second[2] = 'C';
 
-
-    cout << str << endl;
-    cout << second << endl;
-
     PrintString(str);
     PrintString(second);
+
+    const ScopedPtr scoped = new Vector();
+    scoped->getVector();
 
 }
