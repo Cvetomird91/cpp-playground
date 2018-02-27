@@ -47,8 +47,14 @@ struct Vector
 
     static int VectorInit(){};
 
+
     ~Vector() {
         std::cout << "Vector Destroyed!!!" << std::endl;
+    }
+
+    //private:
+    Vector(const Vector& other) : x(other.x), y(other.y) {
+        std::cout << "Copied Vector!" << std::endl;
     }
 
 };

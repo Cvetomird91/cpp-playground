@@ -66,4 +66,7 @@ int main()
     const ScopedPtr scoped = new Vector();
     scoped->getVector();
 
+    Vector c(1.0, 2.0);
+    Vector d = c;
+
 }

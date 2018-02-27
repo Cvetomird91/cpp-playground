@@ -4,3 +4,8 @@
 	<cstdlib>
 	<pthread.h>
 
+1519032532 source:/home/cvetomir/cpp-playground/ThreadApplication/main.cpp
+	<iostream>
+	<cstdlib>
+	<pthread.h>
+

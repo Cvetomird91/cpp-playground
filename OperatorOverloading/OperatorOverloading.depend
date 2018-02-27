@@ -22,3 +22,20 @@
 
 1518887569 /media/winD/workspaces/cpp-playground/OperatorOverloading/ScopedPtr.h
 
+1519292901 source:/home/cvetomir/cpp-playground/OperatorOverloading/main.cpp
+	<iostream>
+	"Vector.h"
+	<memory>
+	"String.h"
+	<string>
+	<stdlib.h>
+	"ScopedPtr.h"
+	<GLFW/glfw3.h>
+
+1519292909 /home/cvetomir/cpp-playground/OperatorOverloading/Vector.h
+
+1519032532 /home/cvetomir/cpp-playground/OperatorOverloading/String.h
+	<cstring>
+
+1519032532 /home/cvetomir/cpp-playground/OperatorOverloading/ScopedPtr.h
+
