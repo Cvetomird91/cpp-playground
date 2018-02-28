@@ -5,11 +5,20 @@
 #include <string>
 #include <stdlib.h>
 #include "ScopedPtr.h"
+#include <array>
+#include <limits>
+#include "namespaces.h"
+
+namespace a = apple;
 
 using namespace std;
 
 void PrintString(const String& string) {
     std::cout << string << std::endl;
+}
+
+void PrintArray(int* array) {
+
 }
 
 int main()
@@ -19,8 +28,9 @@ int main()
         Vector position(4.0f, 4.0f);
     }
 
-    cout << "After init" << endl;
+    using namespace a;
 
+    cout << "After init" << endl;
     Vector speed(0.5f, 1.5f);
     Vector powerup(1.1f, 1.0f);
 
@@ -38,6 +48,8 @@ int main()
 
     delete memLeak;
     delete strange;
+
+    int* ary = new int[10];
 
     int(*initVar)() = Vector::VectorInit;
 
@@ -68,5 +80,4 @@ int main()
 
     Vector c(1.0, 2.0);
     Vector d = c;
-
 }

@@ -22,7 +22,7 @@
 
 1518887569 /media/winD/workspaces/cpp-playground/OperatorOverloading/ScopedPtr.h
 
-1519292901 source:/home/cvetomir/cpp-playground/OperatorOverloading/main.cpp
+1519840692 source:/home/cvetomir/cpp-playground/OperatorOverloading/main.cpp
 	<iostream>
 	"Vector.h"
 	<memory>
@@ -30,12 +30,16 @@
 	<string>
 	<stdlib.h>
 	"ScopedPtr.h"
-	<GLFW/glfw3.h>
+	<array>
+	<limits>
+	"namespaces.h"
 
-1519292909 /home/cvetomir/cpp-playground/OperatorOverloading/Vector.h
+1519720456 /home/cvetomir/cpp-playground/OperatorOverloading/Vector.h
 
 1519032532 /home/cvetomir/cpp-playground/OperatorOverloading/String.h
 	<cstring>
 
 1519032532 /home/cvetomir/cpp-playground/OperatorOverloading/ScopedPtr.h
+
+1519840682 /home/cvetomir/cpp-playground/OperatorOverloading/namespaces.h
 
