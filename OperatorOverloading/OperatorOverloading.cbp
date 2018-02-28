@@ -36,6 +36,7 @@
 		<Unit filename="String.h" />
 		<Unit filename="Vector.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="namespaces.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />
