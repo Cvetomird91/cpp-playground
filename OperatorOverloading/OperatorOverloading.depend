@@ -6,7 +6,7 @@
 
 1518711248 /home/cvetomir/OperatorOverloading/Vector.h
 
-1518888040 source:/media/winD/workspaces/cpp-playground/OperatorOverloading/main.cpp
+1519887868 source:/media/winD/workspaces/cpp-playground/OperatorOverloading/main.cpp
 	<iostream>
 	"Vector.h"
 	<memory>
@@ -14,8 +14,12 @@
 	<string>
 	<stdlib.h>
 	"ScopedPtr.h"
+	<array>
+	<limits>
+	"namespaces.h"
+	<vector>
 
-1518852925 /media/winD/workspaces/cpp-playground/OperatorOverloading/Vector.h
+1519887512 /media/winD/workspaces/cpp-playground/OperatorOverloading/Vector.h
 
 1518868942 /media/winD/workspaces/cpp-playground/OperatorOverloading/String.h
 	<cstring>
@@ -42,4 +46,6 @@
 1519032532 /home/cvetomir/cpp-playground/OperatorOverloading/ScopedPtr.h
 
 1519840682 /home/cvetomir/cpp-playground/OperatorOverloading/namespaces.h
+
+1519886972 /media/winD/workspaces/cpp-playground/OperatorOverloading/namespaces.h
 

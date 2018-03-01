@@ -8,6 +8,7 @@
 #include <array>
 #include <limits>
 #include "namespaces.h"
+#include <vector>
 
 namespace a = apple;
 
@@ -19,6 +20,12 @@ void PrintString(const String& string) {
 
 void PrintArray(int* array) {
 
+}
+
+void ForEach(const std::vector<int>& values, void(*func)(int)){
+    for (int value : values) {
+        func(value);
+    }
 }
 
 int main()
@@ -51,7 +58,7 @@ int main()
 
     int* ary = new int[10];
 
-    int(*initVar)() = Vector::VectorInit;
+    int(*initVar)(Vector) = Vector::VectorInit;
 
     //unique pointer
     //shared pointer

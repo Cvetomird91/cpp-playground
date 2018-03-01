@@ -45,7 +45,7 @@ struct Vector
         const Vector* v = this;
     }
 
-    static int VectorInit(){};
+    static int VectorInit(Vector v){};
 
 
     ~Vector() {
