@@ -8,5 +8,4 @@ namespace apple {
 
     void print_again() {}
 }
-
 #endif // NAMESPACES_H_INCLUDED

@@ -10,9 +10,8 @@
 #include "namespaces.h"
 #include <vector>
 
-namespace a = apple;
-
 using namespace std;
+namespace a = apple;
 
 void PrintString(const String& string) {
     std::cout << string << std::endl;
@@ -57,6 +56,10 @@ int main()
     delete strange;
 
     int* ary = new int[10];
+
+    *(ary + 9) = 123;
+
+    cout << *(ary + 9) << endl;
 
     int(*initVar)(Vector) = Vector::VectorInit;
 
