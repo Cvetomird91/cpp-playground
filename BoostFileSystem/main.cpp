@@ -17,7 +17,6 @@ int main(int argc, char* argv[]) {
 
     if(is_directory(p)) {
         copy(directory_iterator(p), directory_iterator(), back_inserter(v));
-        //std::cout << p << " is a directory containing:\n";
 
         for ( std::vector<directory_entry>::const_iterator it = v.begin(); it != v.end();  ++it )
         {
@@ -26,8 +25,10 @@ int main(int argc, char* argv[]) {
 
             boost::smatch watch;
 
-            if(boost::regex_match(it->path().string(), watch, txt_filter))
+            if(boost::regex_match(it->path().string(), watch, txt_filter)) {
                 std::cout<< it->path().string() << std::endl;
+                matching_files.push_back(it->path().string());
+            }
         }
     }
 
