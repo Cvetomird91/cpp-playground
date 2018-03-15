@@ -13,7 +13,7 @@ int main(int argc, char* argv[]) {
 
     path p( argc > 1 ? argv[1] : ".");
     std::vector<directory_entry> v; // To save the file names in a vector.
-    std::vector<std::string> matching_files;
+    std::vector<path> matching_files;
 
     if(is_directory(p)) {
         copy(directory_iterator(p), directory_iterator(), back_inserter(v));
@@ -27,7 +27,7 @@ int main(int argc, char* argv[]) {
 
             if(boost::regex_match(it->path().string(), watch, txt_filter)) {
                 std::cout<< it->path().string() << std::endl;
-                matching_files.push_back(it->path().string());
+                matching_files.push_back(it->path());
             }
         }
     }
