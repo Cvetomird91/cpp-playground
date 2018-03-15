@@ -17,11 +17,13 @@
 					<Add option="-lboost_system" />
 					<Add option="-pthread" />
 					<Add option="-lboost_filesystem" />
+					<Add option="-lboost_regex" />
 				</Compiler>
 				<Linker>
 					<Add option="-lboost_system" />
 					<Add option="-pthread" />
 					<Add option="-lboost_filesystem" />
+					<Add option="-lboost_regex" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -34,12 +36,14 @@
 					<Add option="-lboost_system" />
 					<Add option="-pthread" />
 					<Add option="-lboost_filesystem" />
+					<Add option="-lboost_regex" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
 					<Add option="-lboost_system" />
 					<Add option="-pthread" />
 					<Add option="-lboost_filesystem" />
+					<Add option="-lboost_regex" />
 				</Linker>
 			</Target>
 		</Build>
