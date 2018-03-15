@@ -7,7 +7,7 @@
 #include <boost/regex.hpp>
 
 using namespace boost::filesystem;
-const boost::regex txt_filter("\.txt$");
+const boost::regex txt_filter(".*\.txt$");
 
 int main(int argc, char* argv[]) {
 
@@ -26,7 +26,8 @@ int main(int argc, char* argv[]) {
 
             boost::smatch watch;
 
-            std::cout<< it->path().string() << std::endl;
+            if(boost::regex_match(it->path().string(), watch, txt_filter))
+                std::cout<< it->path().string() << std::endl;
         }
     }
 
