@@ -4,12 +4,22 @@
 #include <algorithm>
 #include <boost/filesystem.hpp>
 #include <boost/filesystem/fstream.hpp>
+#include <boost/algorithm/string/find.hpp>
 #include <boost/regex.hpp>
 
 using namespace boost::filesystem;
 const boost::regex txt_filter(".*\.txt$");
 
+static void show_usage(std::string name) {
+    std::cerr << "Usage: " << name << " <path> <search-string>\n" << std::endl;
+}
+
 int main(int argc, char* argv[]) {
+
+    if (argc < 3) {
+        show_usage(argv[0]);
+        return 1;
+    }
 
     path p( argc > 1 ? argv[1] : ".");
     std::vector<directory_entry> v; // To save the file names in a vector.
@@ -26,13 +36,12 @@ int main(int argc, char* argv[]) {
             boost::smatch watch;
 
             if(boost::regex_match(it->path().string(), watch, txt_filter)) {
-                //std::cout<< it->path().string() << std::endl;
-                matching_files.push_back(it->path().string());
+                matching_files.push_back(it->path());
             }
         }
 
         for (int i = 0; i < matching_files.size(); i++) {
-            std::cout << matching_files[i] << std::endl;
+            std::cout << matching_files[i].string() << std::endl;
         }
     }
 
