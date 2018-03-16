@@ -22,6 +22,7 @@ int main(int argc, char* argv[]) {
     }
 
     path p( argc > 1 ? argv[1] : ".");
+    std::string search_string = argv[2];
     std::vector<directory_entry> v; // To save the file names in a vector.
     std::vector<path> matching_files;
 
@@ -41,6 +42,10 @@ int main(int argc, char* argv[]) {
         }
 
         for (int i = 0; i < matching_files.size(); i++) {
+            boost::system::error_code ec;
+            boost::uintmax_t filesize = file_size(matching_files[i], ec);
+
+            //std::cout << matching_files[i].string() << ' ' << filesize << std::endl;
             std::cout << matching_files[i].string() << std::endl;
         }
     }
