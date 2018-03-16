@@ -2,8 +2,8 @@
 #include <iterator>
 #include <vector>
 #include <algorithm>
-#include <cstring>
 #include <boost/filesystem.hpp>
+#include <boost/filesystem/fstream.hpp>
 #include <boost/regex.hpp>
 
 using namespace boost::filesystem;
@@ -26,9 +26,13 @@ int main(int argc, char* argv[]) {
             boost::smatch watch;
 
             if(boost::regex_match(it->path().string(), watch, txt_filter)) {
-                std::cout<< it->path().string() << std::endl;
+                //std::cout<< it->path().string() << std::endl;
                 matching_files.push_back(it->path().string());
             }
+        }
+
+        for (int i = 0; i < matching_files.size(); i++) {
+            std::cout << matching_files[i] << std::endl;
         }
     }
 
