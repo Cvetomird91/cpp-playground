@@ -6,8 +6,10 @@
 #include <boost/filesystem/fstream.hpp>
 #include <boost/algorithm/string/find.hpp>
 #include <boost/regex.hpp>
+#include <boost/date_time/gregorian/gregorian.hpp>
 
 using namespace boost::filesystem;
+using namespace boost::gregorian;
 const boost::regex txt_filter(".*\.txt$");
 
 static void show_usage(std::string name) {
