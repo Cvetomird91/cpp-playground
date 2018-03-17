@@ -1,7 +1,7 @@
 #include <iostream>
 #include <iterator>
 #include <vector>
-#include <algorithm>
+#include <string>
 #include <boost/filesystem.hpp>
 #include <boost/filesystem/fstream.hpp>
 #include <boost/algorithm/string/find.hpp>
@@ -45,8 +45,20 @@ int main(int argc, char* argv[]) {
             boost::system::error_code ec;
             boost::uintmax_t filesize = file_size(matching_files[i], ec);
 
-            //std::cout << matching_files[i].string() << ' ' << filesize << std::endl;
-            std::cout << matching_files[i].string() << std::endl;
+            std::ifstream file(matching_files[i].string());
+
+            if (file) {
+                std::string str((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
+                boost::iterator_range<std::string::const_iterator> rng;
+                rng = boost::ifind_first(str, search_string);
+
+                if (rng) {
+                    std::cout << matching_files[i].string() << std::endl;
+                }
+
+                file.close();
+            }
+
         }
     }
 

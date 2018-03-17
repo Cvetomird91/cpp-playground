@@ -1,9 +1,9 @@
 # depslib dependency file v1.0
-1521214476 source:/home/cvetomir/cpp-playground/BoostFileSystem/main.cpp
+1521222498 source:/home/cvetomir/cpp-playground/BoostFileSystem/main.cpp
 	<iostream>
 	<iterator>
 	<vector>
-	<algorithm>
+	<string>
 	<boost/filesystem.hpp>
 	<boost/filesystem/fstream.hpp>
 	<boost/algorithm/string/find.hpp>
