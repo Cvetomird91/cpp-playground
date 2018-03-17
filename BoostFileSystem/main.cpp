@@ -11,9 +11,24 @@
 using namespace boost::filesystem;
 using namespace boost::gregorian;
 const boost::regex txt_filter(".*\.txt$");
+const boost::regex date_filter("[\d\.]{4,}");
 
-static void show_usage(std::string name) {
+/*
+ * Possible date conventions:
+    - 0505
+    - 20170505
+    - 02.05.2017
+    - 14.05.17
+    - 02052017
+ *
+ */
+
+void show_usage(std::string name) {
     std::cerr << "Usage: " << name << " <path> <search-string>\n" << std::endl;
+}
+
+void show_result(std::vector<path> p) {
+
 }
 
 int main(int argc, char* argv[]) {
@@ -43,10 +58,7 @@ int main(int argc, char* argv[]) {
             }
         }
 
-        for (int i = 0; i < matching_files.size(); i++) {
-            boost::system::error_code ec;
-            boost::uintmax_t filesize = file_size(matching_files[i], ec);
-
+        for (unsigned int i = 0; i < matching_files.size(); i++) {
             std::ifstream file(matching_files[i].string());
 
             if (file) {
