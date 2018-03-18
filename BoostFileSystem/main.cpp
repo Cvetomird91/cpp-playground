@@ -58,10 +58,10 @@ int main(int argc, char* argv[]) {
         }
 
         for (unsigned int i = 0; i < matching_files.size(); i++) {
-            std::ifstream file(matching_files[i].string());
+            std::ifstream *file = new std::ifstream(matching_files[i].string());
 
-            if (file) {
-                std::string* str = new std::string((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
+            if (*file) {
+                std::string* str = new std::string((std::istreambuf_iterator<char>(*file)), std::istreambuf_iterator<char>());
                 boost::iterator_range<std::string::const_iterator> rng;
                 rng = boost::ifind_first(*str, search_string);
 
@@ -70,9 +70,10 @@ int main(int argc, char* argv[]) {
                 }
 
                 delete str;
-                file.close();
+                file->close();
             }
 
+            delete file;
         }
     }
 

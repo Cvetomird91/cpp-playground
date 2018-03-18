@@ -10,13 +10,12 @@
 	<boost/regex.hpp>
 	<boost/date_time/gregorian/gregorian.hpp>
 
-1521367814 source:/media/winD/workspaces/cpp-playground/BoostFileSystem/main.cpp
+1521369304 source:/media/winD/workspaces/cpp-playground/BoostFileSystem/main.cpp
 	<iostream>
 	<iterator>
 	<vector>
 	<string>
 	<boost/filesystem.hpp>
-	<boost/filesystem/fstream.hpp>
 	<boost/algorithm/string/find.hpp>
 	<boost/regex.hpp>
 	<boost/date_time/gregorian/gregorian.hpp>
