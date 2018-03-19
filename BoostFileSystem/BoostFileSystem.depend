@@ -1,11 +1,10 @@
 # depslib dependency file v1.0
-1521297683 source:/home/cvetomir/cpp-playground/BoostFileSystem/main.cpp
+1521448778 source:/home/cvetomir/cpp-playground/BoostFileSystem/main.cpp
 	<iostream>
 	<iterator>
 	<vector>
 	<string>
 	<boost/filesystem.hpp>
-	<boost/filesystem/fstream.hpp>
 	<boost/algorithm/string/find.hpp>
 	<boost/regex.hpp>
 	<boost/date_time/gregorian/gregorian.hpp>

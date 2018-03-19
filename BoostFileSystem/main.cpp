@@ -11,6 +11,7 @@ using namespace boost::filesystem;
 using namespace boost::gregorian;
 const boost::regex txt_filter(".*\.txt$");
 const boost::regex date_filter("[\d\.]{4,}");
+const boost::regex frequency_line("^Matches found.*$");
 
 /*
  * Possible date conventions:
@@ -56,6 +57,9 @@ int main(int argc, char* argv[]) {
                 matching_files.push_back(it->path());
             }
         }
+
+        //print the number of files where the search occured
+        std::cout << "Number of occurences: " << matching_files.size() << std::endl;
 
         for (unsigned int i = 0; i < matching_files.size(); i++) {
             std::ifstream *file = new std::ifstream(matching_files[i].string());
