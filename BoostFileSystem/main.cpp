@@ -2,6 +2,7 @@
 #include <iterator>
 #include <vector>
 #include <string>
+#include <set>
 #include <boost/filesystem.hpp>
 #include <boost/algorithm/string/find.hpp>
 #include <boost/regex.hpp>
@@ -12,7 +13,7 @@ using namespace boost::gregorian;
 const boost::regex txt_filter(".*\.txt$");
 const boost::regex date_filter("[\d\.]{4,}");
 const boost::regex frequency_line("^Matches found.*$");
-int occurence_count;
+int db_occurence_count = 0;
 
 /*
  * Possible date conventions:
@@ -68,7 +69,7 @@ int main(int argc, char* argv[]) {
                 rng = boost::ifind_first(*str, search_string);
 
                 if (rng) {
-                    occurence_count++;
+                    db_occurence_count++;
                     std::cout << matching_files[i].string() << std::endl;
                 }
 
@@ -79,7 +80,10 @@ int main(int argc, char* argv[]) {
             delete file;
         }
 
-        std::cout << "Number of occurences: " << occurence_count << std::endl;
+        std::cout << std::endl;
+        std::cout << "Number of databases, containing the match: " << db_occurence_count << std::endl;
+        std::cout << std::endl;
+
     }
 
     return 0;
