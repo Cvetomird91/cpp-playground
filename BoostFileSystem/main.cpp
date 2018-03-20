@@ -68,13 +68,6 @@ int main(int argc, char* argv[]) {
 
             if (*file) {
 
-                //std::string* file_content = new std::string((std::istreambuf_iterator<char>(*file)), std::istreambuf_iterator<char>());
-                //boost::iterator_range<std::string::const_iterator> search_range_iterator;
-                //search_range_iterator = boost::ifind_first(*file_content, search_string);
-
-                //if (search_range_iterator)
-                //    db_occurence_count++;
-
                 for (std::string str; std::getline(*file, str);) {
 
                     boost::smatch match;
@@ -102,7 +95,13 @@ int main(int argc, char* argv[]) {
                     std::cout << std::endl;
                 }
 
-                delete file_content;
+                //std::string* file_content = new std::string((std::istreambuf_iterator<char>(*file)), std::istreambuf_iterator<char>());
+                //boost::iterator_range<std::string::const_iterator> search_range_iterator = boost::ifind_first(*file_content, search_string);
+
+                //if (search_range_iterator)
+                //    db_occurence_count++;
+
+                //delete file_content;
                 delete file;
                 delete frequency_data_lines;
             }
