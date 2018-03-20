@@ -1,9 +1,10 @@
 # depslib dependency file v1.0
-1521535248 source:/home/cvetomir/cpp-playground/BoostFileSystem/main.cpp
+1521535285 source:/home/cvetomir/cpp-playground/BoostFileSystem/main.cpp
 	<iostream>
 	<iterator>
 	<vector>
 	<string>
+	<set>
 	<boost/filesystem.hpp>
 	<boost/algorithm/string/find.hpp>
 	<boost/regex.hpp>
