@@ -68,6 +68,19 @@ int main(int argc, char* argv[]) {
 
             if (*file) {
 
+                std::ifstream *temp = new std::ifstream(matching_files[i].string());
+                std::string *content = new std::string((std::istreambuf_iterator<char>(*temp)), std::istreambuf_iterator<char>());
+                boost::iterator_range<std::string::const_iterator> search_range_iterator = boost::ifind_first(*content, search_string);
+
+                delete temp;
+                delete content;
+
+                if (search_range_iterator) {
+                    db_occurence_count++;
+                } else {
+                    continue;
+                }
+
                 for (std::string str; std::getline(*file, str);) {
 
                     boost::smatch match;
