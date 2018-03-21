@@ -78,6 +78,9 @@ int main(int argc, char* argv[]) {
                 if (search_range_iterator) {
                     db_occurence_count++;
                 } else {
+                    delete file;
+                    delete frequency_data_lines;
+
                     continue;
                 }
 
