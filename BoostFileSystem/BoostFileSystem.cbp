@@ -58,6 +58,7 @@
 			<Add option="-pthread" />
 			<Add option="-lboost_filesystem" />
 		</Linker>
+		<Unit filename="DatePatterns.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

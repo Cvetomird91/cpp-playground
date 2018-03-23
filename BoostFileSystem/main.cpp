@@ -8,6 +8,8 @@
 #include <boost/regex.hpp>
 #include <boost/date_time/gregorian/gregorian.hpp>
 
+#include "DatePatterns.h"
+
 using namespace boost::filesystem;
 using namespace boost::gregorian;
 const boost::regex txt_filter(".*\.txt$");
@@ -24,6 +26,7 @@ int db_occurence_count = 0;
     - 02052017
  *
  */
+
 
 void show_usage(std::string name) {
     std::cerr << "Usage: " << name << " <path> <search-string>\n" << std::endl;
