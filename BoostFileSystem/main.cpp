@@ -3,8 +3,10 @@
 #include <vector>
 #include <string>
 #include <set>
+#include <map>
 #include <boost/filesystem.hpp>
 #include <boost/algorithm/string/find.hpp>
+#include <boost/algorithm/string/join.hpp>
 #include <boost/regex.hpp>
 #include <boost/date_time/gregorian/gregorian.hpp>
 
@@ -49,6 +51,7 @@ int main(int argc, char* argv[]) {
     std::string search_string = argv[2];
     std::vector<directory_entry> v; // To save all the .txt file names in a vector.
     std::vector<path> matching_files;
+    std::map<std::string, std::string> *results_container = new std::map<std::string, std::string>();
 
     if(is_directory(p)) {
         copy(directory_iterator(p), directory_iterator(), back_inserter(v));
@@ -75,7 +78,7 @@ int main(int argc, char* argv[]) {
             //e.g. abdominal .*\(octave #\d\)
             boost::regex full_name_octave(std::string(search_string).append(" .*?\(octave #\d\)"), boost::regex_constants::perl | boost::regex::icase);
 
-            std::cout << std::string(search_string).append(".*\(octave #\\d\)") << std::endl;
+            std::cout << std::string(search_string).append(".*?\(octave #\\d\)") << std::endl;
 
             if (*file) {
 
@@ -140,6 +143,8 @@ int main(int argc, char* argv[]) {
         std::cout << std::endl;
 
     }
+
+    delete results_container;
 
     return 0;
 }

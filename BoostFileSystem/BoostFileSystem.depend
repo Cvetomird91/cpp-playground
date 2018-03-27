@@ -1,12 +1,14 @@
 # depslib dependency file v1.0
-1522053066 source:/home/cvetomir/cpp-playground/BoostFileSystem/main.cpp
+1522156969 source:/home/cvetomir/cpp-playground/BoostFileSystem/main.cpp
 	<iostream>
 	<iterator>
 	<vector>
 	<string>
 	<set>
+	<map>
 	<boost/filesystem.hpp>
 	<boost/algorithm/string/find.hpp>
+	<boost/algorithm/string/join.hpp>
 	<boost/regex.hpp>
 	<boost/date_time/gregorian/gregorian.hpp>
 	"DatePatterns.h"
@@ -24,6 +26,6 @@
 1521647136 source:/home/cvetomir/cpp-playground/BoostFileSystem/DatePatterns.cpp
 	"DatePatterns.h"
 
-1521791505 /home/cvetomir/cpp-playground/BoostFileSystem/DatePatterns.h
+1522143676 /home/cvetomir/cpp-playground/BoostFileSystem/DatePatterns.h
 	<boost/regex.hpp>
 
