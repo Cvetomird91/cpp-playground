@@ -47,7 +47,7 @@ int main(int argc, char* argv[]) {
 
     path p( argc > 1 ? argv[1] : ".");
     std::string search_string = argv[2];
-    std::vector<directory_entry> v; // To save all the .txt file names in a vector.
+    std::vector<directory_entry> v; // To save the file names in a vector.
     std::vector<path> matching_files;
 
     if(is_directory(p)) {
@@ -70,12 +70,6 @@ int main(int argc, char* argv[]) {
             std::set<std::string> *frequency_data_lines = new std::set<std::string>;
             std::string current_frequency_line;
             int search_hits = 0;
-
-            //generate the regex for matching the full pathogen names and octaves
-            //e.g. abdominal .*\(octave #\d\)
-            boost::regex full_name_octave(std::string(search_string).append(" .*?\(octave #\d\)"), boost::regex_constants::perl | boost::regex::icase);
-
-            std::cout << std::string(search_string).append(".*\(octave #\\d\)") << std::endl;
 
             if (*file) {
 
@@ -110,12 +104,6 @@ int main(int argc, char* argv[]) {
                     if(rng) {
                         search_hits++;
                         frequency_data_lines->insert(current_frequency_line);
-                    }
-
-                    boost::smatch octave_match;
-
-                    if(boost::regex_match(str, octave_match, full_name_octave)) {
-                        //frequency_data_lines->insert(octave_match[0]);
                     }
 
                 }
