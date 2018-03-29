@@ -4,6 +4,7 @@
 #include <string>
 #include <set>
 #include <map>
+
 #include <boost/filesystem.hpp>
 #include <boost/algorithm/string/find.hpp>
 #include <boost/algorithm/string/join.hpp>
@@ -16,7 +17,9 @@ using namespace boost::filesystem;
 using namespace boost::gregorian;
 const boost::regex txt_filter(".*\.txt$");
 const boost::regex date_filter("[\d\.]{4,}");
-const boost::regex frequency_line("^Matches found.*$");
+//^Matches found.*(?= \()
+const boost::regex frequency_line(R"(^Matches found.*?(?= \())");
+//const boost::regex frequency_line("^Matches found.*(?= \\()");
 int db_occurence_count = 0;
 
 /*
@@ -78,7 +81,7 @@ int main(int argc, char* argv[]) {
             //e.g. abdominal .*\(octave #\d\)
             boost::regex full_name_octave(std::string(search_string).append(" .*?\(octave #\d\)"), boost::regex_constants::perl | boost::regex::icase);
 
-            std::cout << std::string(search_string).append(".*?\(octave #\\d\)") << std::endl;
+            //std::cout << std::string(search_string).append(".*?\(octave #\\d\)") << std::endl;
 
             if (*file) {
 
@@ -103,8 +106,8 @@ int main(int argc, char* argv[]) {
 
                     boost::smatch match;
 
-                    if(boost::regex_match(str, match, frequency_line)) {
-                        current_frequency_line = str;
+                    if(boost::regex_search(str, match, frequency_line)) {
+                        current_frequency_line = match[0];
                     }
 
                     boost::iterator_range<std::string::const_iterator> rng;
