@@ -17,9 +17,7 @@ using namespace boost::filesystem;
 using namespace boost::gregorian;
 const boost::regex txt_filter(".*\.txt$");
 const boost::regex date_filter("[\d\.]{4,}");
-//^Matches found.*(?= \()
 const boost::regex frequency_line(R"(^Matches found.*?(?= \())");
-//const boost::regex frequency_line("^Matches found.*(?= \\()");
 int db_occurence_count = 0;
 
 /*

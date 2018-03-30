@@ -18,6 +18,7 @@
 					<Add option="-lboost_system" />
 					<Add option="-lboost_filesystem" />
 					<Add option="-lboost_regex" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m32" />
@@ -37,6 +38,7 @@
 					<Add option="-pthread" />
 					<Add option="-lboost_filesystem" />
 					<Add option="-lboost_regex" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -59,7 +61,9 @@
 			<Add option="-lboost_filesystem" />
 		</Linker>
 		<Unit filename="DatePatterns.h" />
+		<Unit filename="include/Spooky2DatabaseAnalyser.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Spooky2DatabaseAnalyser.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />
