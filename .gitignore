@@ -1,3 +1,6 @@
 *.o
 Release/
 Debug/
+*.cbp
+*.depend
+*.layout
