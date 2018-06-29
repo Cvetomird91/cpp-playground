@@ -4,15 +4,18 @@
 #include <cstdint>
 #include <string>
 
-typedef int (*Hashmap_compare)(void *a, void *b);
-typedef uint32_t (*Hashmap_hash)(void *key);
+typedef int (*Hashmap_compare)(std::string a, std::string b);
+typedef uint32_t (*Hashmap_hash)(std::string key);
 
 class HashMapNode
 {
 public:
-    HashMapNode(int hash, void *key, void *data);
-    void *key;
-    void *data;
+    HashMapNode(int hash, std::string key, std::string data);
+    HashMapNode();
+    //HashMapNode( const HashMapNode &other);  // copy constructor
+    //HashMapNode operator=(const HashMapNode &other);
+    std::string key;
+    std::string data;
     uint32_t hash;
 };
 
