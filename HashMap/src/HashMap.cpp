@@ -51,9 +51,6 @@ int HashMap::setNode(std::string key, std::string data)
     uint32_t hash = 0;
     std::array<HashMapNode, DEFAULT_NUMBER_OF_BUCKETS> *bucket = this->find_bucket(key, &hash);
     HashMapNode *node = new HashMapNode(hash, key, data);
-    //std::cout << bucket->size() << std::endl;
-    //std::exit(0);
-    //bucket[bucket->size()-1] = *node;
     bucket->back() = *node;
 
     return 0;
