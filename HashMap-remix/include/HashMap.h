@@ -19,7 +19,6 @@ class HashMap
         HashMap(Hashmap_compare compare, Hashmap_hash hash);
         Hashmap_compare compare;
         Hashmap_hash    hash;
-        //std::array<HashMapNode*, DEFAULT_NUMBER_OF_BUCKETS> *buckets;
         HashMapNode *buckets;
         HashMapNode *findBucket(std::string key, uint32_t* hash_out);
         void setNode(std::string key, std::string data);

@@ -95,7 +95,6 @@ std::string HashMap::getData(std::string key) {
 
 int HashMap::traverse(Hashmap_traverse_cb traverse_cb) {
     int i = 0;
-    int j = 0;
     int rc = 0;
 
     for (i = 0; i < DEFAULT_NUMBER_OF_BUCKETS; i++) {
