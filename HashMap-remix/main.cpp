@@ -33,6 +33,14 @@ int main()
     std::cout << map->getData("jkl") << std::endl;
     std::cout << map->getData("omgomg") << std::endl;
 
+    HashMapNode *node1 = map->getNode("asd");
+    HashMapNode *node2 = map->getNode("fgh");
+    HashMapNode *node3 = map->getNode("jkl");
+
+    std::cout << node1->hash << std::endl;
+    std::cout << node2->hash << std::endl;
+    std::cout << node3->hash << std::endl;
+
     delete key1;
     delete key2;
     delete key3;

@@ -72,6 +72,19 @@ HashMapNode* HashMap::getNode(uint32_t hash, std::string key) {
     return NULL;
 }
 
+HashMapNode* HashMap::getNode(std::string key) {
+    unsigned int i = 0;
+
+    for (i = 0; i < DEFAULT_NUMBER_OF_BUCKETS; ++i) {
+        HashMapNode *node = &this->buckets[i];
+        if (this->compare(node->key, key)) {
+            return node;
+        }
+    }
+
+    return NULL;
+}
+
 std::string HashMap::getData(std::string key) {
     uint32_t hash = 0;
     HashMapNode *bucket = this->findBucket(key, &hash);
@@ -81,7 +94,20 @@ std::string HashMap::getData(std::string key) {
 }
 
 int HashMap::traverse(Hashmap_traverse_cb traverse_cb) {
+    int i = 0;
+    int j = 0;
+    int rc = 0;
 
+    for (i = 0; i < DEFAULT_NUMBER_OF_BUCKETS; i++) {
+        HashMapNode *bucket = &this->buckets[i];
+        if(bucket) {
+            rc = traverse_cb(bucket);
+            if (rc != 0)
+                return rc;
+        }
+    }
+
+    return 0;
 }
 
 std::string deleteNode(std::string key) {

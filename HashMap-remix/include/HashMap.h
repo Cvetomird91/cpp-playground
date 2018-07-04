@@ -24,6 +24,7 @@ class HashMap
         HashMapNode *findBucket(std::string key, uint32_t* hash_out);
         void setNode(std::string key, std::string data);
         HashMapNode* getNode(uint32_t hash, std::string key);
+        HashMapNode* getNode(std::string key);
         std::string getData(std::string key);
         int traverse(Hashmap_traverse_cb traverse_cb);
         std::string deleteNode(std::string key);
